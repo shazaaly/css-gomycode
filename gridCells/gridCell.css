@@ -1,0 +1,29 @@
+.container {
+height: 500px;
+  display: grid;
+  grid-template-columns: repeat(2, 150px);
+  grid-template-rows: repeat(2, 140px);
+  grid-template-areas:
+    "box1 box2"
+    "box3 box4";
+  gap: 20px;
+}
+
+.box1 {
+  grid-area: box1;
+}
+
+.box2 {
+  grid-area: box2;
+  align-self: end;
+}
+
+.box3 {
+  grid-area: box3;
+}
+
+.box4 {
+  grid-area: box4;
+  align-self: end;
+
+}

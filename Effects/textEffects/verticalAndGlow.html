@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertical Text</title>
+</head>
+
+<style>
+    .vertical {
+
+        writing-mode: vertical-rl;
+
+    }
+
+    .textShadow {
+        font-size: 20px;
+        text-shadow: 0 0 30px green, 0 0 5px white;
+        width: 294px;
+        text-align: center;
+    }
+
+    .glow {
+        padding: 5px;
+        background-color: black;
+        width: 300px;
+        color: white;
+        text-shadow: 0 0 7px white, 0 0 10px white, 0 0 14px yellow, 0 0 50px yellow;
+    }
+
+    .move {
+        transform: rotate(0deg);
+        transition: transform 2s;
+    }
+
+    .move:hover {
+        color: rgb(135, 16, 16);
+        transform: rotate(-10deg);
+    }
+</style>
+
+<body style="font-family: 'Courier New', Courier, monospace; ">
+    <h1 style="color: brown;">Vertical Text</h1>
+    <h1 class="textShadow" style="background-color: black;">GoMyCode new session</h1>
+    <p class="vertical">16 February 2023</p>
+    <h3 class="glow">
+        might have that reaction. Texts or words can make a website engaging and interesting, but they can also make you
+    </h3>
+    <div class="move">CSS EFFECTS SESSION</div>
+</body>
+
+</html>

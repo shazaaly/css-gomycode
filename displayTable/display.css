@@ -1,0 +1,9 @@
+#container::before {
+  content: "";
+  display: table;
+  clear: both;
+}
+#myGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}

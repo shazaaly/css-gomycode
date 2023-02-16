@@ -1,0 +1,17 @@
+.container {
+  display: inline-flex;
+  border-radius: 10px;
+  border: 1px solid #635985;
+  overflow: hidden;
+}
+.searchBox {
+  flex: 1;
+  border: 0;
+}
+input.submit {
+  border-radius: 5px;
+  border: 0;
+  padding: 0.4rem;
+  background-color: #635985;
+  color: white;
+}

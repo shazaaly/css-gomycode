@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Effects</title>
+</head>
+<style>
+    .text {
+        font-size: medium;
+        border: 1px dotted brown;
+        width: 300px;
+        /* this causes text to go out of borders  */
+
+        white-space: nowrap;
+        /*  needed with ellipsis to remove extra text , used together */
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+        /* text-overflow: clip;    text is cut*/
+        /* 3 dots instead of rest of text */
+
+
+    }
+
+    .text:hover {
+        overflow: visible;
+    }
+</style>
+
+<body>
+    <h2 style="color: brown; font-weight: 600;">Ellipses Property</h2>
+    <p class="text" style="color: brown;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste excepturi ut in
+        soluta, voluptates
+        optio, nemo vitae suscipit adipisci, repudiandae reiciendis blanditiis quod quam ad ea itaque dolores?
+        Doloremque, ipsam.</p>
+
+</body>
+
+</html>

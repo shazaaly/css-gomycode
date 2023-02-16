@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1,minimum-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js" integrity="sha512-1/RvZTcCDEUjY/CypiMz+iqqtaoQfAITmNSJY17Myp4Ms5mdxPS5UV7iOfdZoxcGhzFbOm6sntTKJppjvuhg4g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap-grid.min.css" integrity="sha512-JQksK36WdRekVrvdxNyV3B0Q1huqbTkIQNbz1dlcFVgNynEMRl0F8OSqOGdVppLUDIvsOejhr/W5L3G/b3J+8w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="/styles.css">
+  <head>
+<header>
+  <div class="d-inline">
+    <h3>Header</h3>
+  </div>
+</header>
+  
+<main>
+  <h1 class="mb-lg-0">Pure CSS drop shadow on scroll</h1>
+    
+  <p class="big">This pen demonstrates how we can use CSS to let a drop-shadow appear below a header bar when we start to scroll the page.</p>
+    
+  <p class="big"><strong>Scroll the page to see the effect.</strong></p>
+    
+  <p>This effect is used in Material Design, so for the Pure CSS Material Design library I am building, I needed to implement this drop-shadow. But Google implements this with a class on the body that is activated on scroll by some piece of Javascript that listens to the <tt>onscroll</tt> event. For a Pure CSS solution, I needed a different approach.</p>
+    
+  <p>For a long time I thought the effect would be impossible to achieve as there are no events in CSS and there is no <tt>:scrolled</tt> pseudo class like we have with <tt>:checked</tt> for checkboxes. But then I got an idea. I realized that elements with <tt>position:sticky</tt> do respond to scroll behavior. Surely I could use this somehow to have a shadow slide down when we scroll?</p> 
+  <p>Well, I have not found a practical way to have something move down when the page scrolls down. The direction of the movement must be the same as the content, so opposite the scroll direction (when we scroll down, the content appears to move up). Maybe we could do something with <tt>transform</tt> here, but I did not investigate.</p>
+  <p>Instead, I came up with another idea. What if, instead of the shadow appearing from behind the header, we could use a cover element that would hide the shadow initially and then reveal it on scroll?</p>
+  <p>It took a couple of hours hacking around with <tt>position:sticky</tt> before I managed to implement the effect, but the approach does work! In all modern browsers... except.. Edge. Unfortunately Edge has a <a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/14298121/">bug</a> at the moment relating to nested sticky elements that breaks the effect. But the good news is that it's apparently already fixed and should be released in the next upcoming version. So hopefully once that releases, this effect will work cross-browser.</p>
+  
+  <p>Also read <a href="https://stijndewitt.com/2018/06/12/pure-css-drop-shadow-on-scroll/">my blog post</a> about this codepen.</p>
+</main>
+</html>
